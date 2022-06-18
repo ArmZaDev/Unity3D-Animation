@@ -524,13 +524,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.43
+  m_Height: 1.48
   m_Radius: 0.15
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!136 &2101754892
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -551,9 +551,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1532131
-  m_Height: 1.4824605
+  m_Height: 1.4566959
   m_Direction: 1
-  m_Center: {x: 0.0032734424, y: 0.70165193, z: 0}
+  m_Center: {x: 0.0032734424, y: 0.68876964, z: 0}
 --- !u!54 &2101754894
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d31bdd044f48c24385a8798369d4244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 6
   rotationSpeed: 25
   jumpSpeed: 7.5
   garvity: 20

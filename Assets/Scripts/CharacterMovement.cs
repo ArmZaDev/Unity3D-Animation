@@ -47,9 +47,43 @@ public class CharacterMovement : MonoBehaviour
             anim.SetBool("Running", false);
         }
 
-        
+        //Jump
+        if (characterController.isGrounded)
+        {
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            moveDirection *= speed;
+        }
+        characterController.Move(moveDirection * Time.deltaTime);
+        updateMovement();
 
     }
 
-    
+    void updateMovement()
+    {
+        Vector3 motion = inputVector;
+        motion *= (Mathf.Abs(inputVector.x) == 1 && Mathf.Abs(inputVector.z) == 1)?.7f:1;
+        rotateTowardMovementDireation();
+        getCameraRealtive();
+    }
+
+    void rotateTowardMovementDireation()
+    {
+        if(inputVector != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * rotationSpeed);
+        }
+    }
+
+    void getCameraRealtive()
+    {
+        Transform cameratransform = Camera.main.transform;
+        Vector3 forward = cameratransform.TransformDirection(Vector3.forward);
+        forward.y = 0;
+        forward = forward.normalized;
+
+        Vector3 right = new Vector3(forward.z, 0, -forward.x);
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        targetDirection = (h * right) + (v * forward);
+    }
 }
