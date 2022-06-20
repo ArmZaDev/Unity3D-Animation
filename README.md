@@ -1,8 +1,8 @@
 # Learn Unity3D
 
-I learn to buil animaton, Custom main camera
+I learn to build animaton, Custom main camera
 
-Learn to use animator controller
+Learn to use animator controller, create animation, create TPP player
 
 #Unity version : 2022.2.0a17
 
