@@ -1,6 +1,8 @@
 # Learn Unity3D
 
-I learn to build animaton, Custom main camera
+I learn to to use Animation Transitions, Custom main camera,
+
+use animation transitions to make a character transition from an idle animation to a running animation when it starts moving.
 
 Learn to use animator controller, create animation, create TPP player
 
