@@ -6,7 +6,11 @@ use animation transitions to make a character transition from an idle animation 
 
 Learn to use animator controller, create animation, create TPP player
 
-# Example
+I Getting a rigged character from Mixamo 
+
+Her name is Amy
+
+# Example Amy
 
 ![Model](https://user-images.githubusercontent.com/106058972/174800644-27fa547c-6d87-427f-9d86-80ebd2e7399d.png)
 
